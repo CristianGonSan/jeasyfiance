@@ -581,7 +581,7 @@ public class RequestController extends BasicApiControllerTool2 implements Initia
                         return;
                     }
 
-                    fileChooser.setInitialFileName("Reporte de Préstamo " + start.getValue() + " - " + end.getValue() + ".xlsx");
+                    fileChooser.setInitialFileName("Reporte de Préstamo " + start.getValue() + " - " + end.getValue() + ".csv");
                     File selectedFile = fileChooser.showSaveDialog(stageManager.getStage());
 
                     if (selectedFile == null) return;

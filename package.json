@@ -5,13 +5,14 @@
     "main": "index.js",
     "preferGlobal": true,
     "repository": "",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "jdeploy": {
         "jdk": false,
         "javaVersion": "17",
+        "documentTypes": [{}],
         "jar": "target/jeasyfiance-1.0.0.jar",
         "javafx": true,
-        "title": "Jeasyfiance"
+        "title": "JEasyFinance"
     },
     "dependencies": {
         "njre": "^0.2.0",

@@ -410,7 +410,7 @@ public class LoanApiController extends UtilityHandler<Loan> implements Initializ
                 .add("operation", "single")
                 .add("loan_id", lastObjet.getLoanId());
 
-        fileChooser.setInitialFileName("Calendario SolicitudId-" + loanRequest.getRequestId() + ".xlsx");
+        fileChooser.setInitialFileName("Calendario SolicitudId-" + loanRequest.getRequestId() + ".csv");
         File selectedFile = fileChooser.showSaveDialog(stageManager.getStage());
 
         if (selectedFile == null) return;

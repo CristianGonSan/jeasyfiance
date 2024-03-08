@@ -396,7 +396,7 @@ public class EmployeeController extends BasicApiControllerTool2 implements Initi
                         return;
                     }
 
-                    fileChooser.setInitialFileName("Reporte por empleado - " + lastObjet.getFirstName() + " " + lastObjet.getLastName() + ".xlsx");
+                    fileChooser.setInitialFileName("Reporte por empleado - " + lastObjet.getFirstName() + " " + lastObjet.getLastName() + ".csv");
                     File selectedFile = fileChooser.showSaveDialog(stageManager.getStage());
 
                     if (selectedFile == null) return;

@@ -409,7 +409,7 @@ public class ClientApiController extends BasicApiControllerTool2 implements Init
                         return;
                     }
 
-                    fileChooser.setInitialFileName("Reporte por Cliente - " + lastObjet.getFirstName() + " " + lastObjet.getLastName() + ".xlsx");
+                    fileChooser.setInitialFileName("Reporte por Cliente - " + lastObjet.getFirstName() + " " + lastObjet.getLastName() + ".csv");
                     File selectedFile = fileChooser.showSaveDialog(stageManager.getStage());
 
                     if (selectedFile == null) return;
