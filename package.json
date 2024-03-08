@@ -1,30 +1,24 @@
 {
-  "bin": {
-    "jeasyfiance": "jdeploy-bundle/jdeploy.js"
-  },
-  "author": "",
-  "description": "Parent for JavaFX starter project",
-  "main": "index.js",
-  "preferGlobal": true,
-  "repository": "",
-  "version": "1.0.0",
-  "jdeploy": {
-    "jdk": false,
-    "javaVersion": "17",
-    "jar": "target/jeasyfiance-1.0.0.jar",
-    "javafx": true,
-    "title": "Jeasyfiance"
-  },
-  "dependencies": {
-    "njre": "^0.2.0",
-    "shelljs": "^0.8.4"
-  },
-  "license": "ISC",
-  "name": "sample2",
-  "files": [
-    "jdeploy-bundle"
-  ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+    "bin": {"jeasyfiance": "jdeploy-bundle/jdeploy.js"},
+    "author": "",
+    "description": "Sistema de gestión para solicitudes y prestamos.",
+    "main": "index.js",
+    "preferGlobal": true,
+    "repository": "",
+    "version": "1.0.1",
+    "jdeploy": {
+        "jdk": false,
+        "javaVersion": "17",
+        "jar": "target/jeasyfiance-1.0.0.jar",
+        "javafx": true,
+        "title": "Jeasyfiance"
+    },
+    "dependencies": {
+        "njre": "^0.2.0",
+        "shelljs": "^0.8.4"
+    },
+    "license": "ISC",
+    "name": "JEasyFinance",
+    "files": ["jdeploy-bundle"],
+    "scripts": {"test": "echo \"Error: no test specified\" && exit 1"}
 }

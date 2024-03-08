@@ -27,7 +27,7 @@ public class MainApplication extends Application {
 
         stageManager.setTitle("Iniciar Sesión");
         stageManager.setScene("login/main");
-        stageManager.setIcon("/com/comiftouch/jeasyfinance/view/images/logos/j.png");
+        stageManager.setIcon("/com/comiftouch/jeasyfinance/view/images/logos/JEasyFinanceLogo.png");
         stageManager.setResizable(false);
         stageManager.showStage();
 
