@@ -1,0 +1,54 @@
+/* Establecer el fondo de la tabla */
+.table-view {
+    -fx-background-color: #f0f0f0;
+}
+
+/* Establecer el color de fondo de las celdas alternas */
+/*.table-row-cell:odd {
+    -fx-background-color: #e0e0e0;
+}*/
+
+/* Establecer el color de fondo de la celda seleccionada */
+.table-row-cell:selected {
+    -fx-background-color: #50A2FF;
+}
+
+/* Establecer el color del texto en las celdas */
+.table-cell {
+    -fx-text-fill: #000000;
+}
+
+/* Establecer el color de fondo del encabezado de la columna */
+.table-view .column-header {
+    -fx-background-color: #248b2c;
+}
+
+/* Establecer el color del texto en el encabezado de la columna */
+.table-view .column-header .label {
+    -fx-text-fill: #ffffff;
+}
+
+/* Eliminar los bordes predeterminados de la tabla */
+.table-view .scroll-bar:horizontal,
+.table-view .scroll-bar:vertical {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}
+
+/* Establecer el estilo de desplazamiento de la tabla */
+.table-view .scroll-bar:horizontal .increment-button,
+.table-view .scroll-bar:horizontal .decrement-button,
+.table-view .scroll-bar:vertical .increment-button,
+.table-view .scroll-bar:vertical .decrement-button {
+    -fx-padding: 5;
+}
+
+/* Establecer el color de fondo del deslizador de la barra de desplazamiento */
+.table-view .scroll-bar .thumb {
+    -fx-background-color: #707070;
+}
+
+/* Establecer el color de fondo del área de desplazamiento al pasar el mouse sobre ella */
+.table-view .scroll-bar .track-background:hover {
+    -fx-background-color: #d0d0d0;
+}

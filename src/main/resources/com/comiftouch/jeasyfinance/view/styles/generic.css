@@ -1,0 +1,164 @@
+.basic-button {
+  -fx-height: 26px;
+  -fx-background-color: #FFFFFF;
+  -fx-background-radius: 5;
+
+  -fx-font-size: 14px;
+  -fx-text-fill: #248b2c;
+  -fx-border-color: #248b2c;
+  -fx-border-radius: 5;
+
+  -fx-cursor: hand;
+}
+
+.basic-button:hover {
+  -fx-background-color: #248b2c;
+  -fx-text-fill: #FFFFFF;
+}
+
+/* Cambia el color de fondo al hacer clic en el botón */
+.button:pressed {
+  -fx-background-color: #1a6520;
+  -fx-text-fill: #FFFFFF;
+}
+
+.basic-button:disabled {
+  -fx-border-color: #aaaaaa;
+  -fx-text-fill: #CCCCCC;
+  -fx-opacity: 0.5;
+}
+
+/*Boton de confirmar*/
+#confirm-button {
+  -fx-height: 26px;
+  -fx-background-color: #FFFFFF;
+  -fx-background-radius: 5;
+
+  -fx-font-size: 14px;
+  -fx-text-fill: #3e1ac2;
+  -fx-border-color: #3e1ac2;
+  -fx-border-radius: 5;
+}
+
+#confirm-button:hover {
+  -fx-background-color: #4a1fe2;
+  -fx-text-fill: #FFFFFF;
+}
+
+#confirm-button:pressed {
+  -fx-background-color: #2b1283;
+  -fx-text-fill: #FFFFFF;
+}
+
+#confirm-button:disabled {
+  -fx-border-color: #aaaaaa;
+  -fx-text-fill: #CCCCCC;
+  -fx-opacity: 0.5;
+}
+
+/*Boton de Cancelar*/
+#cancel-button{
+  -fx-height: 26px;
+  -fx-background-color: #FFFFFF;
+  -fx-background-radius: 5;
+
+  -fx-font-size: 14px;
+  -fx-text-fill: #c51818;
+  -fx-border-color: #c51818;
+  -fx-border-radius: 5;
+}
+
+#cancel-button:hover {
+  -fx-background-color: #c51818;
+  -fx-text-fill: #FFFFFF;
+}
+
+#cancel-button:pressed {
+  -fx-background-color: #a11414;
+  -fx-text-fill: #FFFFFF;
+}
+
+#cancel-button:disabled {
+  -fx-border-color: #aaaaaa;
+  -fx-text-fill: #CCCCCC;
+  -fx-opacity: 0.5;
+}
+
+
+.text-field {
+  -fx-background-color: #ffffff;
+  -fx-background-radius: 5;
+  -fx-font-size: 14px;
+  -fx-text-fill: #333333;
+  -fx-prompt-text-fill: #aaaaaa;
+  -fx-border-color: #aaaaaa;
+  -fx-border-radius: 5;
+  -fx-border-width: 1;
+}
+
+.text-field:focused {
+  -fx-border-color: #2196f3;
+}
+
+.text-field:disabled {
+  -fx-background-color: #f0f0f0;
+  -fx-border-color: #cccccc;
+  -fx-text-fill: #000000;
+}
+
+.combo-box {
+  -fx-background-color: #ffffff;
+  -fx-background-radius: 5;
+  -fx-font-size: 14px;
+  -fx-text-fill: #333333;
+  -fx-prompt-text-fill: #aaaaaa;
+  -fx-border-color: #aaaaaa;
+  -fx-border-radius: 5;
+  -fx-border-width: 1;
+}
+
+.label {
+  -fx-prompt-text-fill: #aaaaaa;
+}
+
+.label:disabled {
+  -fx-opacity: 1;
+}
+
+.slider {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #aaaaaa;
+    -fx-border-radius: 5;
+    -fx-border-width: 1;
+    -fx-padding: 2 5;
+}
+
+.slider .track {
+    -fx-background-color: #cccccc;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-width: 0;
+    -fx-pref-height: 10;
+}
+
+.slider .thumb {
+    -fx-background-color: #2196f3;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-width: 0;
+    -fx-pref-width: 20;
+    -fx-pref-height: 20;
+}
+
+.tab {
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: #333333;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px;
+}
+
+.tab:selected {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #ff0000;
+}

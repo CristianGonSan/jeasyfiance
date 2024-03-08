@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="371.0" spacing="10.0" stylesheets="@../styles/generic.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.comiftouch.jeasyfinance.controller.ConfigController">
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" style="-fx-background-color: #ffffff;" VBox.vgrow="ALWAYS">
+         <children>
+            <Label text="Configuración del sistema, aquí puede cambiar la url de la API y el tamaño del paquete de datos. Para guaradar los cambios haga clic en guardar y cierre el programa para aplicar los cambios." wrapText="true" />
+            <Separator prefWidth="200.0" />
+            <Label prefHeight="30.0" style="-fx-background-color: white;" text="Url de la Api">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="-10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="url" prefHeight="30.0" />
+            <Label prefHeight="30.0" text="Tamaño de Paquete">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="-10.0" />
+               </VBox.margin>
+            </Label>
+            <Slider fx:id="slider" majorTickUnit="10.0" min="10.0" minorTickCount="0" prefHeight="30.0" showTickLabels="true" snapToTicks="true" value="1.0" />
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <HBox alignment="BOTTOM_RIGHT" spacing="10.0">
+         <children>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#save" styleClass="basic-button" text="Guardar">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../images/ico/cheque.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Confirmar" />
+               </tooltip>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

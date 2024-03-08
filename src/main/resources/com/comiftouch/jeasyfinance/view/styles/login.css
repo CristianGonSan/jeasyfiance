@@ -1,0 +1,30 @@
+.flashy-button {
+    -fx-background-color: #248b2c;
+    -fx-text-fill: #fff;
+}
+
+.flashy-button:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.flashy-button:pressed {
+    -fx-background-color: #155c16;
+}
+
+.text-field-line {
+    -fx-background-color: transparent;
+    -fx-border-color: #248b2c;
+    -fx-border-width: 0 0 1 0;
+}
+
+.button-b {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-cursor: hand;
+}
+
+/* Estilo del AnchorPane con imagen de fondo */

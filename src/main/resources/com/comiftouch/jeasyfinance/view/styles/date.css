@@ -1,0 +1,35 @@
+.date-picker {
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #999999;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 0;
+    -fx-padding: 10;
+}
+
+.date-picker .arrow-button .arrow {
+    -fx-background-color: #999999;
+}
+
+.date-picker .arrow-button:hover {
+    -fx-background-color: #eeeeee;
+}
+
+.date-picker .arrow-button:pressed {
+    -fx-background-color: #dddddd;
+}
+
+.date-picker .text-field {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 0;
+    -fx-border-color: #999999;
+    -fx-border-radius: 0;
+    -fx-border-width: 1px;
+    -fx-prompt-text-fill: #999999;
+}
+
+.date-picker .text-field:focused {
+    -fx-border-color: #cccccc;
+}

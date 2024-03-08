@@ -1,0 +1,39 @@
+.side-button {
+    -fx-font-size: 24px;
+
+    -fx-background-radius: 0;
+    -fx-background-color: #248b2c;
+    -fx-text-fill: #ffffff;
+    -fx-max-width: Infinity;
+    -fx-max-height: Infinity;
+    -fx-cursor: hand;
+}
+
+.side-button:hover {
+    -fx-background-color: #54a454;
+    -fx-text-fill: #ffffff;
+}
+
+.side-button:pressed {
+    -fx-background-color: #155c16;
+}
+
+.side-button:disabled {
+    -fx-background-color: #155c16;
+    /*-fx-opacity: 0.5;*/
+}
+
+.image-container {
+    -fx-background-image: url('../images/logos/logo-mini.png');
+    /*-fx-background-size: contain; */
+    -fx-background-position: center center; /* Opcional: posición de la imagen */
+    -fx-background-repeat: no-repeat; /* Opcional: no repetir la imagen */
+}
+
+#side {
+    -fx-min-width: 150;
+    -fx-pref-width: 200;
+    -fx-max-width: 300;
+    -fx-background-color: #248b2c;
+}
+
