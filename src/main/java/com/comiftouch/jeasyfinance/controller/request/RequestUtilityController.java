@@ -37,14 +37,9 @@ public class RequestUtilityController extends UtilityHandler<LoanRequest> implem
     @FXML
     private TextArea commentField;
     @FXML
-    private WebView web;
-    @FXML
     private DatePicker date;
-    @FXML
-    private TabPane tabPane;
 
     private TextField[] textFields = null;
-    private WebEngine webEngine;
 
     private SearchClientController searchClientUtility;
     private SearchEmployeeController searchEmployeeUtility;
@@ -56,8 +51,6 @@ public class RequestUtilityController extends UtilityHandler<LoanRequest> implem
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         textFields = new TextField[]{text1, text2, text3, text4, text5, text6};
-        webEngine = web.getEngine();
-        webEngine.setJavaScriptEnabled(true);
 
         text5.addEventFilter(KeyEvent.KEY_TYPED, event -> {
             String s = text5.getText();
@@ -79,6 +72,13 @@ public class RequestUtilityController extends UtilityHandler<LoanRequest> implem
                     event.consume();
                 }
             } else if (!Character.isDigit(c)) {
+                event.consume();
+            }
+        });
+
+        text6.addEventFilter(KeyEvent.KEY_TYPED, event -> {
+            char c = event.getCharacter().charAt(0);
+            if (!Character.isDigit(c)) {
                 event.consume();
             }
         });
@@ -125,11 +125,6 @@ public class RequestUtilityController extends UtilityHandler<LoanRequest> implem
 
     public void insertObjet(LoanRequest objet) {
         lastObjet = objet;
-        if (lastObjet.getRequestStatus() == 0 || lastObjet.getRequestStatus() == 2) {
-            if (tabPane.getSelectionModel().getSelectedIndex() == 2) {
-                tabPane.getSelectionModel().select(0);
-            }
-        }
         setObjet(objet);
     }
 
@@ -147,7 +142,6 @@ public class RequestUtilityController extends UtilityHandler<LoanRequest> implem
         avalId = 0;
         executiveId = 0;
         supervisorId = 0;
-        webEngine.load("https://www.google.com.mx/maps");
     }
 
     private LoanRequest getObjet() {
@@ -193,11 +187,12 @@ public class RequestUtilityController extends UtilityHandler<LoanRequest> implem
         String referenceUrl = objet.getReferenceUrl();
 
         if (referenceUrl != null && !referenceUrl.isEmpty()) {
-            webEngine.load(referenceUrl);
             urlField.setText(referenceUrl);
         } else {
-            webEngine.load("https://www.google.com.mx/maps");
+            urlField.clear();
         }
+
+        commentField.setText(objet.getCommentsUrl());
     }
 
     private float getAmount() {
@@ -237,7 +232,6 @@ public class RequestUtilityController extends UtilityHandler<LoanRequest> implem
                             task = Task.NOTHING;
                             dialogStage.close();
 
-                            webEngine.load(null);
                             System.gc();
                         });
                     }
@@ -273,7 +267,6 @@ public class RequestUtilityController extends UtilityHandler<LoanRequest> implem
                             task = Task.NOTHING;
                             dialogStage.close();
 
-                            webEngine.load(null);
                             System.gc();
                         });
                     }
@@ -297,7 +290,6 @@ public class RequestUtilityController extends UtilityHandler<LoanRequest> implem
         lastObjet = null;
         dialogStage.close();
 
-        webEngine.load(null);
         System.gc();
     }
 
@@ -347,10 +339,6 @@ public class RequestUtilityController extends UtilityHandler<LoanRequest> implem
 
     public void open() {
         DependencyContainer.getInstance().getDependency(HostServices.class).showDocument(urlField.getText());
-    }
-
-    public void getUrl() {
-        urlField.setText(webEngine.getLocation());
     }
 
     public void deleteAval() {

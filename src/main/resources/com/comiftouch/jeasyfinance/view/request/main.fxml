@@ -19,7 +19,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="769.0" prefWidth="1182.0" spacing="10.0" style="-fx-background-color: #ffffff;" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.comiftouch.jeasyfinance.controller.request.RequestController">
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="769.0" prefWidth="1182.0" spacing="10.0" style="-fx-background-color: #ffffff;" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.comiftouch.jeasyfinance.controller.request.RequestController">
     <children>
         <Label fx:id="message" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Solicitudes" textFill="#288a24">
             <font>
@@ -139,7 +139,14 @@
                         </Label>
                         <DatePicker fx:id="start" maxWidth="1.7976931348623157E308" prefHeight="31.0" prefWidth="162.0" promptText="Fecha de inicio" stylesheets="@../styles/date.css" />
                         <DatePicker fx:id="end" maxWidth="1.7976931348623157E308" prefHeight="31.0" prefWidth="162.0" promptText="Fecha de inicio" stylesheets="@../styles/date.css" />
-                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#report" styleClass="basic-button" text="Generar Reporte" />
+                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#report" styleClass="basic-button" text="Informe">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/ico/informe.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
                      </children>
                   </VBox>
                     </children>
